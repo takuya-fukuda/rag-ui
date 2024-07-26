@@ -1,11 +1,11 @@
 import React from 'react';
-import './Page3.css';
+import './Html.css';
 import Sidebar from "./components/Sidebar"
 import ApiFetch2 from './components/ApiFetch2';
 
-const Page3 = () => { 
+const Html = () => { 
     return (
-        <div className="Page3">
+        <div className="Html">
             <Sidebar />
             <div className="Content">
                 <ApiFetch2/>
@@ -15,4 +15,4 @@ const Page3 = () => {
 }
 
 
-export default Page3;
+export default Html;

@@ -1,11 +1,11 @@
 import React from 'react';
-import './Page1.css';
+import './Rag.css';
 //import { Link } from 'react-router-dom';// 追加 Linkタブを読み込む
 import Sidebar from "./components/Sidebar"
 
-const Page1 = () => {
+const Rag = () => {
     return (
-        <div className="Page1">
+        <div className="Rag">
             <Sidebar /> {/* サイドバーを作成するコンポーネント */}
             <div className="Content">
                 <h1>RAG APP</h1>
@@ -18,4 +18,4 @@ const Page1 = () => {
         </div>
     );
 }
-export default Page1;
+export default Rag;

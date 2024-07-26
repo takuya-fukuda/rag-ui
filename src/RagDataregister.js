@@ -1,14 +1,14 @@
 import React from 'react';
-import './Page4.css';
+import './RagDataregister.css';
 import Sidebar from "./components/Sidebar"
 import ApiFetch3 from './components/ApiFetch3';
 
 //Reactのポイント
 //状態管理はuseStateで行う
 
-const Page4 = () => { 
+const RagDataregister = () => { 
     return (
-        <div className="Page4">
+        <div className="RagDataregister">
             <Sidebar /> {/* サイドバーを作成するコンポーネント */}
             <div className="Content">
                 <ApiFetch3/>
@@ -18,4 +18,4 @@ const Page4 = () => {
 }
 
 
-export default Page4;
+export default RagDataregister;

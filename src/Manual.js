@@ -1,11 +1,11 @@
 import React from 'react';
-import './Page2.css';
+import './Manual.css';
 import Sidebar from "./components/Sidebar"
 import ApiFetch from './components/ApiFetch';
 
-const Page2 = () => {
+const Manual = () => {
     return (
-        <div className="Page2">
+        <div className="Manual">
             <Sidebar /> {/* サイドバーを作成するコンポーネント */}
             <div className="Content">
                 <ApiFetch />
@@ -14,5 +14,5 @@ const Page2 = () => {
     );
 }
 
-export default Page2;
+export default Manual;
 

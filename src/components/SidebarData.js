@@ -20,21 +20,21 @@ export const SidebarData = [
       {
         title: "画像⇒マニュアル",
         icon: <QueryStatsIcon />,
-        link: "/page2",
+        link: "/Manual",
       },
       {
         title: "マニュアルHTML化",
         icon: <QueryStatsIcon />,
-        link: "/page3",
+        link: "/Html",
       },
       {
         title: "RAGデータ登録",
         icon: <PersonAddIcon />,
-        link: "/page4",
+        link: "/RagDataregister",
       },
       {
         title: "RAG検索",
         icon: <AddCardIcon />,
-        link: "/page5",
+        link: "/RagChat",
       },
 ]

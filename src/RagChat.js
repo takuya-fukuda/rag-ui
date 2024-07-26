@@ -1,12 +1,12 @@
 import React from 'react';
-import './Page5.css';
+import './RagChat.css';
 import Sidebar from "./components/Sidebar"
 import ApiFetch4 from './components/ApiFetch4';
 
-const Page5 = () => { 
+const RagChat = () => { 
 
     return (
-        <div className="Page5">
+        <div className="RagChat">
             <Sidebar />
             <div className="Content">
                 <ApiFetch4 />
@@ -16,4 +16,4 @@ const Page5 = () => {
 }
 
 
-export default Page5;
+export default RagChat;
