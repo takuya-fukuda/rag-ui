@@ -1,9 +1,11 @@
 ## 概要
 
 これは RAG アプリのサンプル UI となります。  
-バックエンドは下記で実装それています。  
+バックエンドは下記で実装されています。  
 バックエンドのフレームワークは Django の RESTAPI  
 東海理化の別のリポジトリを参照してください
+https://3ize.backlog.jp/git/TRESEN_LAB/RAG_DEMO.git
+対象のブランチ demo_api
 
 ## React について
 
