@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Category from "./Category";
 
 const ApiFetch4 = () => {
   const [inputText, setText] = useState(""); //入力ボックスのState関数
   const [responseData, setResponseData] = useState(null); //APIのレスポンスのState
   const [error, setError] = useState(null); //APIエラーの時のState
+  const [selectedCategory, setSelectedCategory] = useState(""); //選択されたカテゴリーのState
 
   const onChangeText = (event) => setText(event.target.value); //入力された項目を受け取る処理。この処理はある意味固定
 
@@ -19,7 +21,7 @@ const ApiFetch4 = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          category: "test", //見出し
+          category: selectedCategory, //プルダウンで選択されたカテゴリーを使用
           question: newText, //HTMLマニュアルファイルではなく直書きされたもの
         }),
       });
@@ -50,6 +52,7 @@ const ApiFetch4 = () => {
       {/* <select id="dropdown">
                     <option value="option1">クルマの予約</option>
                 </select><br/> */}
+      <Category setSelectedCategory={setSelectedCategory} />
       <button onClick={sendData}>回答生成</button>
       <br />
       {error && <pre>Error: {error}</pre>}
