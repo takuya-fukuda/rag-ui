@@ -17,3 +17,7 @@ https://3ize.backlog.jp/git/TRESEN_LAB/RAG_DEMO.git
 git clone 対象のリポジトリ  
 .git がある配下で下記実行
 npm start
+
+## アプリケーションイメージ
+
+![My Image](./image.jpg)
