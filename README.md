@@ -20,4 +20,4 @@ npm start
 
 ## アプリケーションイメージ
 
-![My Image](./image.jpg)
+![My Image](./sample.jpg)
