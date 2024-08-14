@@ -1,0 +1,79 @@
+.Home {
+  display: flex; /* Flexbox レイアウトを有効にする。サイドバーの横にアプリを作成したいので、追加で。 */
+  width: 100%;
+  height: 100vh;
+}
+.RagDataRegister {
+  display: flex; /* Flexbox レイアウトを有効にする。サイドバーの横にアプリを作成したいので、追加で。 */
+  width: 100%;
+  height: 100vh;
+}
+
+.RagChat {
+  display: flex; /* Flexbox レイアウトを有効にする。サイドバーの横にアプリを作成したいので、追加で。 */
+  width: 100%;
+  height: 100vh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.Sidebar {
+  height: 100%;
+  width: 250px;
+  background-color: #2d445d;
+}
+
+.SidebarList {
+  height: auto;
+  padding: 0;
+  width: 100%;
+}
+
+.SidebarList #active {
+  background-color: #3b627a;
+}
+
+.SidebarList .row {
+  width: 100%;
+  height: 60px;
+  /*background-color: #3fe84a;*/
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.SidebarList .row:hover {
+  cursor: pointer;
+  background-color: #3b627a;
+}
+
+.row #icon {
+  flex: 30%;
+  display: grid;
+  place-items: center;
+}
+
+.row #title {
+  flex: 70%;
+}
+
+.SidebarIcon {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.SidebarIcon img {
+  width: 100px;
+}
+
+/*追加。サイドバーの横に表示*/
+.Content {
+  flex-grow: 1; /* Allows Content to take the remaining space */
+  padding: 20px;
+}
