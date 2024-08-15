@@ -2,11 +2,19 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Category from "./Category";
 
+type Res = {
+  message: string | number | null;
+  data: {
+    answer: string | number | null;
+    context: string | number | null;
+  };
+};
+
 const AnswerApi = () => {
-  const [inputText, setText] = useState(""); //入力ボックスのState関数
-  const [responseData, setResponseData] = useState(null); //APIのレスポンスのState
-  const [error, setError] = useState(""); //APIエラーの時のState
-  const [selectedCategory, setSelectedCategory] = useState(""); //選択されたカテゴリーのState
+  const [inputText, setText] = useState<string | number>(""); //入力ボックスのState関数
+  const [responseData, setResponseData] = useState<Res | null>(null); //APIのレスポンスのState
+  const [error, setError] = useState<string | number>(""); //APIエラーの時のState
+  const [selectedCategory, setSelectedCategory] = useState<string>(""); //選択されたカテゴリーのState
 
   const onChangeText = (event: React.ChangeEvent<HTMLTextAreaElement>) =>
     setText(event.target.value); //入力された項目を受け取る処理。この処理はある意味固定

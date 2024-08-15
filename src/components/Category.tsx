@@ -5,10 +5,10 @@ interface CategoryProps {
 }
 
 const Category: React.FC<CategoryProps> = ({ setSelectedCategory }) => {
-  const [options, setOptions] = useState([]);
+  const [options, setOptions] = useState<Array<string | number>>([]);
   const [error, setError] = useState<string | null>(null);
 
-  const apiUrl = "http://44.219.78.185:8000/ragapp/category/";
+  const apiUrl = "http://localhost:8000/ragapp/category/";
 
   useEffect(() => {
     const fetchData = async () => {
