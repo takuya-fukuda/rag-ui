@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
+type Register = {
+  message: string | number;
+};
+
 const DataRegisterApi = () => {
-  const [inputText, setText] = useState(""); //入力ボックスのState関数
-  const [responseData, setResponseData] = useState(null); //APIのレスポンスのState
+  const [inputText, setText] = useState<string | number>(""); //入力ボックスのState関数
+  const [responseData, setResponseData] = useState<Register | null>(null); //APIのレスポンスのState
   const [error, setError] = useState<string | null>(null); //APIエラーの時のState
 
   const onChangeText = (event: React.ChangeEvent<HTMLTextAreaElement>) =>
