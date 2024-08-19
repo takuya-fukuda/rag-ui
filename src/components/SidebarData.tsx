@@ -7,12 +7,20 @@ import AddCardIcon from "@mui/icons-material/AddCard";
 //import BackupIcon from "@mui/icons-material/Backup";
 //import SettingsIcon from "@mui/icons-material/Settings";
 import QueryStatsIcon from "@mui/icons-material/QueryStats";
+import { SvgIconProps } from "@mui/material/SvgIcon";
 
 //アイコンのインポートの仕方は下記から検索してコマンドがわかる
 //npm install @mui/icons-material
 //https://mui.com/material-ui/material-icons/
 
-export const SidebarData = [
+//型定義
+type Sidebar = Array<{
+  title: string;
+  icon: React.ReactElement<SvgIconProps>;
+  link: string;
+}>;
+
+export const SidebarData: Sidebar = [
   {
     title: "ホーム",
     icon: <HomeIcon />,
