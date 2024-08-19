@@ -1,11 +1,7 @@
 import React from "react";
 import HomeIcon from "@mui/icons-material/Home";
-//import AttachEmailIcon from "@mui/icons-material/AttachEmail";
-//import AssessmentIcon from "@mui/icons-material/Assessment";
 import SearchIcon from "@mui/icons-material/Search";
 import QuestionAnswerIcon from "@mui/icons-material/QuestionAnswer";
-//import BackupIcon from "@mui/icons-material/Backup";
-//import SettingsIcon from "@mui/icons-material/Settings";
 import { SvgIconProps } from "@mui/material/SvgIcon";
 
 //アイコンのインポートの仕方は下記から検索してコマンドがわかる
