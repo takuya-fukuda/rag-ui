@@ -27,7 +27,7 @@
   color: #5f6368;
 }
 
-.form input[type="email"],
+.form input[type="username"],
 .form input[type="password"] {
   width: 100%;
   padding: 12px 20px;

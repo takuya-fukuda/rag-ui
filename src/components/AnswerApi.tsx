@@ -71,7 +71,7 @@ const AnswerApi = () => {
         </div>
       )}
       <br />
-      <Link to={`/`}>ホームへ戻る</Link>{" "}
+      <Link to={`/Home`}>ホームへ戻る</Link>{" "}
       {/* 追加　Go To page1をクリックするとhttp://localhost:3000/に遷移する */}
     </div>
   );

@@ -5,7 +5,7 @@ import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 
 const Login: React.FC = () => {
-  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
@@ -13,12 +13,13 @@ const Login: React.FC = () => {
     event.preventDefault();
 
     try {
-      const response = await fetch("https://your-api-endpoint.com/login", {
+      const response = await fetch("http://localhost:8000/ragapp/login/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({ username, password }),
+        credentials: "include", // ここが重要
       });
 
       if (response.ok) {
@@ -44,9 +45,9 @@ const Login: React.FC = () => {
           <label>
             ユーザ名
             <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              type="username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
               required
             />
           </label>

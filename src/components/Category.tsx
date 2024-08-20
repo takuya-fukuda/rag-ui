@@ -18,13 +18,20 @@ const Category: React.FC<CategoryProps> = ({ setSelectedCategory }) => {
           headers: {
             "Content-Type": "application/json",
           },
+          credentials: "include", // クッキーを含めるために必要
         });
         if (!response.ok) {
           throw new Error("Network response was not ok " + response.statusText);
         }
         // レスポンスをJSON形式に変換
         const data = await response.json();
-        setOptions(data.category);
+
+        // `category`配列から`h3`の値だけを取り出して`options`にセット
+        const categoryOptions = Array.from(
+          new Set<string>(data.category.map((item: { h3: string }) => item.h3))
+        );
+
+        setOptions(categoryOptions);
       } catch (error) {
         setError((error as Error).message);
       }

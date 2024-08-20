@@ -19,7 +19,7 @@ export const SidebarData: Sidebar = [
   {
     title: "ホーム",
     icon: <HomeIcon />,
-    link: "/",
+    link: "/Home",
   },
   {
     title: "RAGデータ登録",
