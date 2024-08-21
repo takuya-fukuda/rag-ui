@@ -19,11 +19,11 @@ const AnswerApi = () => {
   const onChangeText = (event: React.ChangeEvent<HTMLTextAreaElement>) =>
     setText(event.target.value); //入力された項目を受け取る処理。この処理はある意味固定
 
-  const apiUrl = "http://localhost:8000/ragapp/RAG/";
+  const apiUrl: string = "http://localhost:8000/ragapp/RAG/";
 
-  const sendData = async () => {
+  const sendData = async (): Promise<void> => {
     try {
-      const newText = inputText; //入力された項目の受け取りと変数格納。
+      const newText: string | number = inputText; //入力された項目の受け取りと変数格納。
       const response = await fetch(apiUrl, {
         method: "POST", // POSTメソッドを使用
         headers: {
