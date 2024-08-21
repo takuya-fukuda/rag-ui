@@ -29,6 +29,7 @@ const AnswerApi = () => {
         headers: {
           "Content-Type": "application/json",
         },
+        credentials: "include", // クッキーを含めるために必要
         body: JSON.stringify({
           category: selectedCategory, //プルダウンで選択されたカテゴリーを使用
           question: newText, //HTMLマニュアルファイルではなく直書きされたもの

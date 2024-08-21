@@ -23,6 +23,7 @@ const DataRegisterApi = () => {
         headers: {
           "Content-Type": "application/json",
         },
+        credentials: "include", // クッキーを含めるために必要
         body: JSON.stringify({
           data: [
             {
