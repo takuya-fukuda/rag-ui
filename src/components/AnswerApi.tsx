@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Category from "./Category";
+import styled from "styled-components";
 
 type Res = {
   message: string | number | null;
@@ -53,11 +54,11 @@ const AnswerApi = () => {
   return (
     <div>
       <h1>チャット画面</h1>
-      <textarea
+      <StyledTextarea
         placeholder="テキストを入力"
         value={inputText}
         onChange={onChangeText}
-      ></textarea>
+      ></StyledTextarea>
       <br />
       {/* <select id="dropdown">
                     <option value="option1">クルマの予約</option>
@@ -79,3 +80,12 @@ const AnswerApi = () => {
 };
 
 export default AnswerApi;
+
+const StyledTextarea = styled.textarea`
+  width: 100%; /* 横幅いっぱいに広げる */
+  height: 150px; /* 必要に応じて高さを設定 */
+  padding: 10px;
+  box-sizing: border-box; /* パディングを含めた幅と高さを考慮 */
+  font-size: 16px; /* テキストのサイズを設定 */
+  resize: none; /* ユーザーがテキストエリアのサイズを変更できないようにする（オプション） */
+`;

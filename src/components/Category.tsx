@@ -28,7 +28,7 @@ const Category: React.FC<CategoryProps> = ({ setSelectedCategory }) => {
 
         // `category`配列から`h3`の値だけを取り出して`options`にセット
         const categoryOptions = Array.from(
-          new Set<string>(data.category.map((item: { h3: string }) => item.h3))
+          new Set<string>(data.category.map((item: { h2: string }) => item.h2))
         );
 
         setOptions(categoryOptions);

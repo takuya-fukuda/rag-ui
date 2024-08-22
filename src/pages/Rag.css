@@ -77,3 +77,33 @@
   flex-grow: 1; /* Allows Content to take the remaining space */
   padding: 20px;
 }
+
+/*ドロップエリアのスタイル*/
+.drop-area-title {
+  margin: 0;
+}
+
+.drop-area {
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px #000 dotted;
+}
+
+.drop-area input {
+  display: none;
+}
+
+.drop-area p {
+  margin: 0;
+  text-align: center;
+}
+
+.gray {
+  background-color: #808080;
+}
+
+.file-preview {
+  display: block;
+  width: 50%;
+  margin-bottom: 20px;
+}
