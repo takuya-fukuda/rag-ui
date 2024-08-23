@@ -3,7 +3,7 @@ import "./Rag.css";
 import Sidebar from "../components/Sidebar";
 import DataRegisterApi from "../components/DataRegisterApi";
 import { Footer } from "../components/Footer";
-import { Header } from "../components/Header";
+import CustomHeader from "../components/CustomHeader";
 
 //Reactのポイント
 //状態管理はuseStateで行う
@@ -11,7 +11,7 @@ import { Header } from "../components/Header";
 const RagDataRegister = () => {
   return (
     <div>
-      <Header />
+      <CustomHeader />
       <div className="RagDataRegister">
         <Sidebar /> {/* サイドバーを作成するコンポーネント */}
         <div className="Content">

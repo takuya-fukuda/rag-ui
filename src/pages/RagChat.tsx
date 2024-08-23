@@ -3,13 +3,13 @@ import "./Rag.css";
 
 import AnswerApi from "../components/AnswerApi";
 import Sidebar from "../components/Sidebar";
-import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
+import CustomHeader from "../components/CustomHeader";
 
 const RagChat = () => {
   return (
     <div>
-      <Header />
+      <CustomHeader />
       <div className="RagChat">
         <Sidebar />
         <div className="Content">

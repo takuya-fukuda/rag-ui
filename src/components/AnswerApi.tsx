@@ -64,7 +64,9 @@ const AnswerApi = () => {
                     <option value="option1">クルマの予約</option>
                 </select><br/> */}
       <Category setSelectedCategory={setSelectedCategory} />
-      <button onClick={sendData}>回答生成</button>
+      <ButtonContainer>
+        <SButton onClick={sendData}>回答生成</SButton>
+      </ButtonContainer>
       <br />
       {error && <pre>Error: {error}</pre>}
       {responseData && (
@@ -88,4 +90,23 @@ const StyledTextarea = styled.textarea`
   box-sizing: border-box; /* パディングを含めた幅と高さを考慮 */
   font-size: 16px; /* テキストのサイズを設定 */
   resize: none; /* ユーザーがテキストエリアのサイズを変更できないようにする（オプション） */
+`;
+
+const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const SButton = styled.button`
+  color: #fff;
+  padding: 6px 24px;
+  border: none;
+  border-radius: 9999px;
+  outline: none;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+  background-color: #2a3f56;
 `;
