@@ -1,7 +1,7 @@
-import CustomHeader from "../components/CustomHeader";
-import { Footer } from "../components/Footer";
+import CustomHeader from "../components/layout/CustomHeader";
+import { Footer } from "../components/layout/Footer";
 //import { Header } from "../components/Header";
-import Sidebar from "../components/Sidebar";
+import Sidebar from "../components/layout/Sidebar";
 import "./Rag.css";
 
 export const Home = () => {

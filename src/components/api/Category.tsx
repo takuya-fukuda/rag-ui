@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, memo } from "react";
 
 interface CategoryProps {
   setSelectedCategory: React.Dispatch<React.SetStateAction<string>>;
 }
 
-const Category: React.FC<CategoryProps> = ({ setSelectedCategory }) => {
+//memoでレンダリングを抑える
+const Category: React.FC<CategoryProps> = memo(({ setSelectedCategory }) => {
   const [options, setOptions] = useState<Array<string | number>>([]);
   const [error, setError] = useState<string | null>(null);
 
@@ -60,6 +61,6 @@ const Category: React.FC<CategoryProps> = ({ setSelectedCategory }) => {
       <br />
     </div>
   );
-};
+});
 
 export default Category;

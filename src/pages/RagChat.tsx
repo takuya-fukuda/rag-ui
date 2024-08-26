@@ -1,10 +1,10 @@
 import React from "react";
 import "./Rag.css";
 
-import AnswerApi from "../components/AnswerApi";
-import Sidebar from "../components/Sidebar";
-import { Footer } from "../components/Footer";
-import CustomHeader from "../components/CustomHeader";
+import AnswerApi from "../components/api/AnswerApi";
+import Sidebar from "../components/layout/Sidebar";
+import { Footer } from "../components/layout/Footer";
+import CustomHeader from "../components/layout/CustomHeader";
 
 const RagChat = () => {
   return (

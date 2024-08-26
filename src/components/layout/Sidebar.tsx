@@ -1,5 +1,5 @@
 import React from "react";
-import "../pages/Rag.css";
+import "../../pages/Rag.css";
 import { SidebarData } from "./SidebarData";
 
 //https://github.com/Shin-sibainu/sidebar-using-react/tree/main

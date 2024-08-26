@@ -1,9 +1,9 @@
 import React from "react";
 import "./Rag.css";
-import Sidebar from "../components/Sidebar";
-import DataRegisterApi from "../components/DataRegisterApi";
-import { Footer } from "../components/Footer";
-import CustomHeader from "../components/CustomHeader";
+import Sidebar from "../components/layout/Sidebar";
+import DataRegisterApi from "../components/api/DataRegisterApi";
+import { Footer } from "../components/layout/Footer";
+import CustomHeader from "../components/layout/CustomHeader";
 
 //Reactのポイント
 //状態管理はuseStateで行う
