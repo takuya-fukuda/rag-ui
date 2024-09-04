@@ -14,7 +14,8 @@ type Res = {
 const AnswerApi = () => {
   const [inputText, setText] = useState<string | number>(""); //入力ボックスのState関数
   const [responseData, setResponseData] = useState<Res | null>(null); //APIのレスポンスのState
-  const [error, setError] = useState<string | number>(""); //APIエラーの時のState
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false); //APIエラーの時のState
   const [selectedCategory, setSelectedCategory] = useState<string>(""); //選択されたカテゴリーのState
 
   const onChangeText = (event: React.ChangeEvent<HTMLTextAreaElement>) =>
@@ -23,8 +24,12 @@ const AnswerApi = () => {
   const apiUrl: string = "http://localhost:8000/ragapp/RAG/";
 
   const sendData = async (): Promise<void> => {
+    setLoading(true);
+    setError(false);
+    console.log("Selected Category at send:", selectedCategory); // ここで出力される値を確認
     try {
       const newText: string | number = inputText; //入力された項目の受け取りと変数格納。
+
       const response = await fetch(apiUrl, {
         method: "POST", // POSTメソッドを使用
         headers: {
@@ -33,7 +38,9 @@ const AnswerApi = () => {
         credentials: "include", // クッキーを含めるために必要
         body: JSON.stringify({
           category: selectedCategory, //プルダウンで選択されたカテゴリーを使用
+          //category: "エリア管理",
           question: newText, //HTMLマニュアルファイルではなく直書きされたもの
+          ragfusion_flag: false,
         }),
       });
       if (!response.ok) {
@@ -43,17 +50,20 @@ const AnswerApi = () => {
       // レスポンスをJSON形式に変換
       const data = await response.json();
       setResponseData(data); //JSONの受け取り
-      setError(""); //エラーなしで更新
       setText(""); //実行後に入力ボックスを空にする
-    } catch (error) {
-      setError((error as Error).message);
-      setResponseData(null);
+    } catch {
+      setError(true);
+    } finally {
+      setLoading(false);
     }
   };
 
   return (
     <div>
       <h1>チャット画面</h1>
+      <p>
+        プルダウンでバグ発生中。一回他の物を選択してから、選択したいやつ選択
+      </p>
       <StyledTextarea
         placeholder="テキストを入力"
         value={inputText}
@@ -68,11 +78,16 @@ const AnswerApi = () => {
         <SButton onClick={sendData}>回答生成</SButton>
       </ButtonContainer>
       <br />
-      {error && <pre>Error: {error}</pre>}
-      {responseData && (
-        <div>
-          <pre>{JSON.stringify(responseData, null, 2)}</pre>
-        </div>
+      {error ? (
+        <pre style={{ color: "red" }}>データの取得に失敗しました。</pre>
+      ) : loading ? (
+        <pre>Loading...</pre>
+      ) : (
+        responseData && (
+          <div>
+            <pre>{JSON.stringify(responseData, null, 2)}</pre>
+          </div>
+        )
       )}
       <br />
       <Link to={`/Home`}>ホームへ戻る</Link>{" "}

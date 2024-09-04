@@ -5,7 +5,7 @@ interface CategoryProps {
 }
 
 //memoでレンダリングを抑える
-const Category: React.FC<CategoryProps> = memo(({ setSelectedCategory }) => {
+const Category: React.FC<CategoryProps> = ({ setSelectedCategory }) => {
   const [options, setOptions] = useState<Array<string | number>>([]);
   const [error, setError] = useState<string | null>(null);
 
@@ -61,6 +61,6 @@ const Category: React.FC<CategoryProps> = memo(({ setSelectedCategory }) => {
       <br />
     </div>
   );
-});
+};
 
 export default Category;
