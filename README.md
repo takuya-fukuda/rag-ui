@@ -18,7 +18,9 @@ npm start
 
 # フォルダ説明
 
+```
 pages: アプリケーションルート先のファイル
 components/api: アプリケーション内で呼ばれる API の部品
 components/layout:　レイアウト用の部品が入っている
 hooks: API の関数格納先
+```
