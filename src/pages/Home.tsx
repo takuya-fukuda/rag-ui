@@ -2,7 +2,7 @@ import CustomHeader from "../components/layout/CustomHeader";
 import { Footer } from "../components/layout/Footer";
 //import { Header } from "../components/Header";
 import Sidebar from "../components/layout/Sidebar";
-import "./Rag.css";
+import "./RagChat.css";
 
 export const Home = () => {
   return (

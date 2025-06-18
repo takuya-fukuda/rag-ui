@@ -1,5 +1,5 @@
 import React from "react";
-import "./Rag.css";
+import "./RagChat.css";
 
 import AnswerApi from "../components/api/AnswerApi";
 import Sidebar from "../components/layout/Sidebar";

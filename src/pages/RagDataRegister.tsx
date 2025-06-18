@@ -1,5 +1,5 @@
 import React from "react";
-import "./Rag.css";
+import "./RagChat.css";
 import Sidebar from "../components/layout/Sidebar";
 import DataRegisterApi from "../components/api/DataRegisterApi";
 import { Footer } from "../components/layout/Footer";

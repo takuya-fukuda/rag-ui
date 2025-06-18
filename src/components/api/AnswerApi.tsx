@@ -18,7 +18,7 @@ const AnswerApi = () => {
   const [error2, setError2] = useState(false);
 
   //テキスト入力時
-  const onChangeText = (event: React.ChangeEvent<HTMLTextAreaElement>) =>
+  const onChangeText = (event: React.ChangeEvent<HTMLInputElement>) =>
     setText(event.target.value); //入力された項目を受け取る処理。この処理はある意味固定
 
   //回答生成用(カスタムフックなし)
@@ -86,11 +86,11 @@ const AnswerApi = () => {
           </div>
         </ContentContainer>
         <InputContainer>
-          <StyledTextarea
+          <StyledInput
             placeholder="質問を入力"
             value={inputText}
             onChange={onChangeText}
-          ></StyledTextarea>
+          />
 
           <SButton onClick={sendData}>回答生成</SButton>
         </InputContainer>
@@ -125,8 +125,8 @@ const InputContainer = styled.div`
   background-color: #fff;
 `;
 
-const StyledTextarea = styled.textarea`
-  width: 80%; /* 横幅いっぱいに広げる */
+const StyledInput = styled.input`
+  width: 90%; /* 横幅いっぱいに広げる */
 `;
 
 const SButton = styled.button`
