@@ -11,14 +11,14 @@ import CustomHeader from "../components/layout/CustomHeader";
 const RagDataRegister = () => {
   return (
     <div>
-      <CustomHeader />
+      {/* <CustomHeader /> */}
       <div className="RagDataRegister">
         <Sidebar /> {/* サイドバーを作成するコンポーネント */}
         <div className="Content">
           <DataRegisterApi />
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

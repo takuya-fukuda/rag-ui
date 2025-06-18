@@ -5,11 +5,6 @@ React×Typescript での実装となります。
 
 ![画面イメージ](./assets/rag_img.jpg)
 
-## Backend
-
-バックエンドは API となっており、下記 URL を参照してください  
-https://github.com/takuya-fukuda/rag-research
-
 ### 起動方法
 
 npm start

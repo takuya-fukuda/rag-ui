@@ -37,9 +37,10 @@ const DataRegisterApi = () => {
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     onDrop,
     accept: {
-      "image/png": [".png"],
-      "image/jpeg": [".jpg", ".jpeg"],
-      "text/html": [".html"],
+      // "image/png": [".png"],
+      // "image/jpeg": [".jpg", ".jpeg"],
+      // "text/html": [".html"],
+      "application/pdf": [".pdf"], // ← 追加
     },
   });
 
@@ -63,7 +64,7 @@ const DataRegisterApi = () => {
   }, [watchFile]);
 
   //APIの処理
-  const apiUrl: string = "http://localhost:8000/ragapp/upload/";
+  const apiUrl: string = "http://localhost:8000/api/rag/dataregister/";
 
   const sendData = async (): Promise<void> => {
     if (!watchFile) {
@@ -117,7 +118,7 @@ const DataRegisterApi = () => {
       {error && <pre>Error: {error}</pre>}
       {responseData && (
         <div>
-          <pre>{JSON.stringify(responseData, null, 2)}</pre>
+          <pre>データが登録されました。</pre>
         </div>
       )}
       <br />
