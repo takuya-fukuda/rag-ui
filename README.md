@@ -16,7 +16,7 @@ https://github.com/takuya-fukuda/rag-research
 npm start
 ```
 
-#　フォルダ説明
+# フォルダ説明
 
 pages: アプリケーションルート先のファイル
 components/api: アプリケーション内で呼ばれる API の部品
