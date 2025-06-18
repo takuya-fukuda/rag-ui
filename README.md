@@ -6,7 +6,7 @@ React×Typescript での実装となります。
 ## Backend
 
 バックエンドは API となっており、下記 URL を参照してください  
-https://github.com/takuya-fukuda/rag
+https://github.com/takuya-fukuda/rag-research
 
 ### 起動方法
 

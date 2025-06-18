@@ -9,14 +9,14 @@ import CustomHeader from "../components/layout/CustomHeader";
 const RagChat = () => {
   return (
     <div>
-      <CustomHeader />
+      {/* <CustomHeader /> */}
       <div className="RagChat">
         <Sidebar />
         <div className="Content">
           <AnswerApi />
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
