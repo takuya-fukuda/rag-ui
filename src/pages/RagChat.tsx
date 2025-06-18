@@ -16,7 +16,6 @@ const RagChat = () => {
           <AnswerApi />
         </div>
       </div>
-      {/* <Footer /> */}
     </div>
   );
 };

@@ -22,7 +22,7 @@ const AnswerApi = () => {
     setText(event.target.value); //入力された項目を受け取る処理。この処理はある意味固定
 
   //回答生成用(カスタムフックなし)
-  const apiUrl: string = "http://127.0.0.1:8000/api/rag/normalchat/";
+  const apiUrl: string = "http://127.0.0.1:8000/api/rag/ragchat/";
 
   const sendData = async (): Promise<void> => {
     setLoading2(true);
