@@ -74,8 +74,11 @@
 
 /*追加。サイドバーの横に表示*/
 .Content {
-  flex-grow: 1; /* Allows Content to take the remaining space */
-  padding: 20px;
+  /* flex-grow: 1; */
+  /* padding: 20px; */
+  flex-grow: 1;
+  height: 100%;
+  padding: 0; /* 必要なら */
 }
 
 /*ドロップエリアのスタイル*/
