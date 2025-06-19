@@ -24,3 +24,11 @@ components/api: アプリケーション内で呼ばれる API の部品
 components/layout:　レイアウト用の部品が入っている
 hooks: API の関数格納先
 ```
+
+| アプリルート             | 概要説明                               |
+| ------------------------ | -------------------------------------- |
+| /pages                   | アプリケーションルート先のファイル     |
+| /components/ragchat      | RagChat 画面の部品格納先               |
+| /components/dataregister | RagDataregister の部品格納先           |
+| /components/layout       | 画面共通レイアウト用の部品が入っている |
+| /hooks/                  | API などの関数格納先                   |

@@ -1,7 +1,7 @@
 import React from "react";
 import "./RagChat.css";
 
-import AnswerApi from "../components/api/AnswerApi";
+import AnswerApi from "../components/ragchat/AnswerApi";
 import Sidebar from "../components/layout/Sidebar";
 import { Footer } from "../components/layout/Footer";
 import CustomHeader from "../components/layout/CustomHeader";
