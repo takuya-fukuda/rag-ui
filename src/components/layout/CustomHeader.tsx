@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const CustomHeader = () => {
   const navigate = useNavigate();
 
-  const apiUrl: string = "http://localhost:8000/ragapp/logout/";
+  const apiUrl: string = "http://localhost:8000/api/rag/logout/";
 
   const logout = async (): Promise<void> => {
     const response = await fetch(apiUrl, {
@@ -39,7 +39,8 @@ const SHeader = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 16px;
+  height: 60px; /* 明示的に高さを設定 */
+  padding: 0 16px; /* 左右のパディングのみ残す */
 `;
 
 const H1 = styled.h1`

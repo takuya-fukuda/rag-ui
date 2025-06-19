@@ -105,7 +105,7 @@ const AllContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
 `;
 //
 
@@ -113,6 +113,9 @@ const ContentContainer = styled.div`
   flex: 1; /* 残りのスペースを占める */
   overflow-y: auto; /* 縦方向のスクロールを有効にする */
   padding: 16px;
+  padding-bottom: 80px; /* InputContainerの高さ分のパディングを追加 */
+  height: calc(100vh - 60px - 80px); /* ビューポートの高さからヘッダー(60px)とInputContainer(80px)を引く */
+  max-height: calc(100vh - 60px - 80px); /* 最大高さも設定 */
 `;
 
 const QuestionArea = styled.div`
@@ -123,6 +126,13 @@ const InputContainer = styled.div`
   display: flex;
   padding: 12px;
   background-color: #fff;
+  border-top: 1px solid #ccc;
+  flex-shrink: 0;
+  position: fixed; /* 固定位置に設定 */
+  bottom: 0; /* ブラウザの一番下に配置 */
+  left: 250px; /* サイドバーの幅分だけ右にずらす */
+  right: 0; /* 右端まで広げる */
+  z-index: 1000; /* 他の要素の上に表示 */
 `;
 
 const StyledInput = styled.input`

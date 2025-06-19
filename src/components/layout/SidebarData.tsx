@@ -27,7 +27,7 @@ export const SidebarData: Sidebar = [
     link: "/RagDataRegister",
   },
   {
-    title: "RAG検索",
+    title: "RAGチャット",
     icon: <QuestionAnswerIcon />,
     link: "/RagChat",
   },

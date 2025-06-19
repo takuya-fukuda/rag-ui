@@ -13,18 +13,18 @@ const Login: React.FC = () => {
     event.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:8000/ragapp/login/", {
+      const response = await fetch("http://localhost:8000/api/rag/login/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({ username, password }),
-        credentials: "include", // ここが重要
+        //credentials: "include", // ここが重要
       });
 
       if (response.ok) {
-        const data = await response.json();
-        console.log("Logged in successfully:", data);
+        //const data = await response.json();
+        console.log("Logged in successfully:");
         navigate("/Home");
       } else {
         console.error("Login failed");

@@ -8,8 +8,12 @@ import CustomHeader from "../components/layout/CustomHeader";
 
 const RagChat = () => {
   return (
-    <div>
+    <div className="PageContainer">
       {/* <CustomHeader /> */}
+
+      <div className="HeaderArea">
+        <CustomHeader />
+      </div>
       <div className="RagChat">
         <Sidebar />
         <div className="Content">
