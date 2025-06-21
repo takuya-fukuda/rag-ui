@@ -1,27 +1,11 @@
-import React from "react";
-import "./RagChat.css";
-import Sidebar from "../components/layout/Sidebar";
 import DataRegisterApi from "../components/dataregister/DataRegisterApi";
-import { Footer } from "../components/layout/Footer";
-import CustomHeader from "../components/layout/CustomHeader";
-
-//Reactのポイント
-//状態管理はuseStateで行う
+import Layout from "../components/layout/Layout";
 
 const RagDataRegister = () => {
   return (
-    <div className="PageContainer">
-      <div className="HeaderArea">
-        <CustomHeader />
-      </div>
-      <div className="RagDataRegister">
-        <Sidebar /> {/* サイドバーを作成するコンポーネント */}
-        <div className="Content">
-          <DataRegisterApi />
-        </div>
-      </div>
-      {/* <Footer /> */}
-    </div>
+    <Layout>
+      <DataRegisterApi />
+    </Layout>
   );
 };
 

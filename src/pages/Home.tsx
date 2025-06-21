@@ -1,25 +1,14 @@
-import CustomHeader from "../components/layout/CustomHeader";
-import { Footer } from "../components/layout/Footer";
-//import { Header } from "../components/Header";
-import Sidebar from "../components/layout/Sidebar";
-import "./RagChat.css";
+import Layout from "../components/layout/Layout";
 
 export const Home = () => {
   return (
-    <div>
-      <CustomHeader />
-      <div className="Home">
-        <Sidebar /> {/* サイドバーを作成するコンポーネント */}
-        <div className="Content">
-          <h1>RAG APP</h1>
-          <p>
-            これはRAGアプリのサンプルUIです。
-            <br />
-            認証後のCookieの保持期間は５分ほどです
-          </p>
-        </div>
-      </div>
-      {/* <Footer /> */}
-    </div>
+    <Layout>
+      <h1>RAG APP</h1>
+      <p>
+        これはRAGアプリのサンプルUIです。
+        <br />
+        認証後のCookieの保持期間は５分ほどです
+      </p>
+    </Layout>
   );
 };
