@@ -1,14 +1,3 @@
-.Home {
-  display: flex; /* Flexbox レイアウトを有効にする。サイドバーの横にアプリを作成したいので、追加で。 */
-  width: 100%;
-  height: 100vh;
-}
-.RagDataRegister {
-  display: flex; /* Flexbox レイアウトを有効にする。サイドバーの横にアプリを作成したいので、追加で。 */
-  width: 100%;
-  height: 100vh;
-}
-
 .PageContainer {
   height: 100vh; /* ページ全体の高さを100vhに設定 */
   display: flex;
@@ -20,16 +9,22 @@
   flex-shrink: 0;
 }
 
+.Home {
+  display: flex; /* Flexbox レイアウトを有効にする。サイドバーの横にアプリを作成したいので、追加で。 */
+  width: 100%;
+  height: 100vh;
+}
+
 .RagChat {
   display: flex; /* Flexbox レイアウトを有効にする。サイドバーの横にアプリを作成したいので、追加で。 */
   flex-grow: 1;
   overflow: hidden; /* コンテンツがはみ出さないようにする */
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.RagDataRegister {
+  display: flex; /* Flexbox レイアウトを有効にする。サイドバーの横にアプリを作成したいので、追加で。 */
+  flex-grow: 1;
+  overflow: hidden; /* コンテンツがはみ出さないようにする */
 }
 
 .Sidebar {
@@ -91,34 +86,4 @@
   display: flex;
   flex-direction: column; /* 縦方向にコンテンツを配置 */
   overflow: hidden; /* コンテンツがはみ出さないようにする */
-}
-
-/*ドロップエリアのスタイル*/
-.drop-area-title {
-  margin: 0;
-}
-
-.drop-area {
-  padding: 20px;
-  margin-bottom: 20px;
-  border: 1px #000 dotted;
-}
-
-.drop-area input {
-  display: none;
-}
-
-.drop-area p {
-  margin: 0;
-  text-align: center;
-}
-
-.gray {
-  background-color: #808080;
-}
-
-.file-preview {
-  display: block;
-  width: 50%;
-  margin-bottom: 20px;
 }

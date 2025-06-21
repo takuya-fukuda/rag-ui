@@ -12,11 +12,14 @@ export const Home = () => {
         <Sidebar /> {/* サイドバーを作成するコンポーネント */}
         <div className="Content">
           <h1>RAG APP</h1>
-          <p>これはRAGアプリのサンプルUIです</p>
-          <p>認証後のCookieの保持期間は５分ほどです</p>
+          <p>
+            これはRAGアプリのサンプルUIです。
+            <br />
+            認証後のCookieの保持期間は５分ほどです
+          </p>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

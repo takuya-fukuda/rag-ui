@@ -3,6 +3,7 @@ import { useDropzone } from "react-dropzone";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import "./DataRegister.css"; // CSSファイルをインポート
 
 type Register = {
   message: string | number;
@@ -95,12 +96,8 @@ const DataRegisterApi = () => {
   };
 
   return (
-    <div>
+    <AllContainer>
       <h1>データ登録画面(HTML想定)</h1>
-      <p>
-        ドラッグアンドドロップするか、枠内をクリックしてファイルを選択してください
-      </p>
-      <br />
       <div {...getRootProps()} className={`drop-area ${dropAreaBackground}`}>
         <input {...getInputProps()} />
         <p>
@@ -124,11 +121,18 @@ const DataRegisterApi = () => {
       <br />
       <Link to={`/Home`}>ホームへ戻る</Link>{" "}
       {/* 追加　Go To page1をクリックするとhttp://localhost:3000/に遷移する */}
-    </div>
+    </AllContainer>
   );
 };
 
 export default DataRegisterApi;
+
+const AllContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+`;
 
 const ButtonContainer = styled.div`
   display: flex;

@@ -10,8 +10,10 @@ import CustomHeader from "../components/layout/CustomHeader";
 
 const RagDataRegister = () => {
   return (
-    <div>
-      {/* <CustomHeader /> */}
+    <div className="PageContainer">
+      <div className="HeaderArea">
+        <CustomHeader />
+      </div>
       <div className="RagDataRegister">
         <Sidebar /> {/* サイドバーを作成するコンポーネント */}
         <div className="Content">

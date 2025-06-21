@@ -1,4 +1,3 @@
-import React from "react";
 import "./RagChat.css";
 
 import AnswerApi from "../components/ragchat/AnswerApi";
