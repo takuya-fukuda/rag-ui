@@ -15,7 +15,7 @@ type FormData = {
   file: File | null;
 };
 
-const DataRegisterApi = () => {
+const DataRegisterContainer = () => {
   const [responseData, setResponseData] = useState<Register | null>(null); //APIのレスポンスのState
   const [error, setError] = useState<string | null>(null); //APIエラーの時のState
 
@@ -125,7 +125,7 @@ const DataRegisterApi = () => {
   );
 };
 
-export default DataRegisterApi;
+export default DataRegisterContainer;
 
 const AllContainer = styled.div`
   display: flex;

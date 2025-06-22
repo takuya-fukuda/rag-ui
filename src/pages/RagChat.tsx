@@ -1,10 +1,10 @@
-import AnswerApi from "../components/ragchat/AnswerApi";
+import ChatContainer from "../components/ragchat/ChatContainer";
 import Layout from "../components/layout/Layout";
 
 const RagChat = () => {
   return (
     <Layout>
-      <AnswerApi />
+      <ChatContainer />
     </Layout>
   );
 };

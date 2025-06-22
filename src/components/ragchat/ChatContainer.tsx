@@ -8,7 +8,7 @@ type Res = {
   references: any;
 };
 
-const AnswerApi = () => {
+const ChatContainer = () => {
   const [inputText, setText] = useState<string>(""); //入力ボックスのState関数
   const [questions, setQuestions] = useState<
     { question: string; answer: string }[]
@@ -99,7 +99,7 @@ const AnswerApi = () => {
   );
 };
 
-export default AnswerApi;
+export default ChatContainer;
 
 const AllContainer = styled.div`
   width: 100%;
@@ -114,7 +114,9 @@ const ContentContainer = styled.div`
   overflow-y: auto; /* 縦方向のスクロールを有効にする */
   padding: 16px;
   padding-bottom: 80px; /* InputContainerの高さ分のパディングを追加 */
-  height: calc(100vh - 60px - 80px); /* ビューポートの高さからヘッダー(60px)とInputContainer(80px)を引く */
+  height: calc(
+    100vh - 60px - 80px
+  ); /* ビューポートの高さからヘッダー(60px)とInputContainer(80px)を引く */
   max-height: calc(100vh - 60px - 80px); /* 最大高さも設定 */
 `;
 

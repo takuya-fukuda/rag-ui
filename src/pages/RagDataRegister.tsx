@@ -1,10 +1,10 @@
-import DataRegisterApi from "../components/dataregister/DataRegisterApi";
+import DataRegisterContainer from "../components/dataregister/DataRegisterContainer";
 import Layout from "../components/layout/Layout";
 
 const RagDataRegister = () => {
   return (
     <Layout>
-      <DataRegisterApi />
+      <DataRegisterContainer />
     </Layout>
   );
 };
