@@ -1,5 +1,4 @@
-import React from "react";
-import "../../pages/RagChat.css";
+import "./Layout.css";
 import { SidebarData } from "./SidebarData";
 
 //https://github.com/Shin-sibainu/sidebar-using-react/tree/main
