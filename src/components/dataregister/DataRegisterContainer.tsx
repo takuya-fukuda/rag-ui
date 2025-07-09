@@ -97,7 +97,7 @@ const DataRegisterContainer = () => {
 
   return (
     <AllContainer>
-      <h1>データ登録画面(HTML想定)</h1>
+      <h1>データ登録画面(PDF想定)</h1>
       <div {...getRootProps()} className={`drop-area ${dropAreaBackground}`}>
         <input {...getInputProps()} />
         <p>
